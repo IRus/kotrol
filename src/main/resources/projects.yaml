@@ -10,34 +10,34 @@ groups:
         links:
           - label: "Online"
             url: "https://heapy.io"
-        logo: "heapy.svg"
+        logo: "heapy.png"
       - title: "BKUG"
         links:
           - label: "Online"
             url: "https://bkug.by"
-        logo: "bkug.svg"
+        logo: "bkug.png"
       - title: "Streetball"
         links:
           - label: "Online"
             url: "https://streetball.name"
-        logo: "streetball.svg"
+        logo: "streetball.png"
       - title: "Streetball Shop"
         links:
           - label: "Online"
             url: "https://shop.streetball.name/"
-        logo: "streetball-shop.svg"
+        logo: "streetball-shop.png"
       - title: "Ruslan Ibragimov"
         links:
           - label: "Online"
             url: "https://ruslan.ibragimov.by"
-        logo: "ruslan-ibragimov.svg"
+        logo: "ruslan-ibragimov.png"
   - name: "Services"
     projects:
       - title: "Kotlin Jobs"
         links:
           - label: "Online"
             url: "https://heapy.io/kotlin_jobs"
-        logo: "kotlin-jobs.svg"
+        logo: "kotlin-jobs.png"
       - title: "Repo Kotlin Link"
         links:
           - label: "Online"
@@ -57,7 +57,7 @@ groups:
         links:
           - label: "Online"
             url: "https://ibragimov.by/currency/"
-        logo: "currency.svg"
+        logo: "currency.png"
       - title: "Plex"
         links:
           - label: "Online"
@@ -128,7 +128,7 @@ groups:
         logo: "jetkvm.svg"
   - name: "Morty and Picklecam"
     projects:
-      - title: "Home Assistant"
+      - title: "Nimbus - Home Assistant"
         links:
           - label: "Online"
             url: "https://morty.heapyhop.com/"
@@ -144,7 +144,7 @@ groups:
         logo: "picklecam.svg"
   - name: "Nimbus"
     projects:
-      - title: "Home Assistant"
+      - title: "Nimbus - Home Assistant"
         links:
           - label: "Online"
             url: "https://nimbus.heapyhop.com"
