@@ -13,9 +13,9 @@ dependencies {
     implementation(libs.kaml)
 }
 
-java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(25)
+kotlin {
+    jvmToolchain {
+        languageVersion.set(JavaLanguageVersion.of(25))
     }
 }
 
