@@ -35,3 +35,6 @@ projects:
   - title: "Currency"
     link: "https://ibragimov.by/currency/"
     logo: "currency.svg"
+  - title: "Streetball Shop"
+    link: "https://shop.streetball.name/"
+    logo: "streetball-shop.svg"
