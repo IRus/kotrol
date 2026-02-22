@@ -1,6 +1,7 @@
 package io.heapy.kotrol
 
 import io.heapy.kotrol.css.CSS
+import io.heapy.kotrol.css.INLINE_JS
 import io.heapy.kotrol.model.Dashboard
 import io.heapy.kotrol.model.Project
 import kotlinx.html.a
@@ -13,6 +14,7 @@ import kotlinx.html.html
 import kotlinx.html.img
 import kotlinx.html.lang
 import kotlinx.html.meta
+import kotlinx.html.script
 import kotlinx.html.section
 import kotlinx.html.span
 import kotlinx.html.stream.createHTML
@@ -48,6 +50,11 @@ fun generateHtml(dashboard: Dashboard): String {
                             }
                         }
                     }
+                }
+            }
+            script {
+                unsafe {
+                    raw(INLINE_JS)
                 }
             }
         }

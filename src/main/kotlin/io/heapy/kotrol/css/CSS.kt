@@ -82,5 +82,18 @@ h1 {
     border-color: #555;
     color: #ffffff;
 }
+#frequent {
+    display: none;
+    margin-bottom: 2.5rem;
+}
+#frequent.visible {
+    display: block;
+}
+#frequent h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #aaaaaa;
+    margin-bottom: 1rem;
+}
 """.trimIndent()
 }
