@@ -29,3 +29,6 @@ projects:
   - title: "Grafana"
     link: "https://grafana.heapy.io"
     logo: "grafana.svg"
+  - title: "Telegram GPT"
+    link: "https://tgpt.heapy.io/admin"
+    logo: "telegram-gpt.svg"
