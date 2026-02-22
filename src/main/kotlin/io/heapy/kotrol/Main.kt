@@ -2,30 +2,36 @@ package io.heapy.kotrol
 
 import com.charleskorn.kaml.Yaml
 import io.heapy.kotrol.model.Projects
+import java.io.BufferedReader
 import java.io.File
+import java.io.InputStream
 
 fun main() {
     val outputDir = File("build/site")
+    val logosDir = File(outputDir, "logos")
     outputDir.mkdirs()
+    logosDir.mkdirs()
 
-    val yaml = Thread.currentThread().contextClassLoader
-        .getResourceAsStream("projects.yaml")!!
+    val yaml = readResourceStream("projects.yaml")
         .bufferedReader()
-        .readText()
+        .use(BufferedReader::readText)
 
     val projects = Yaml.default.decodeFromString(Projects.serializer(), yaml)
 
     val html = generateHtml(projects)
     File(outputDir, "index.html").writeText(html)
 
-    val logosDir = File(outputDir, "logos")
-    logosDir.mkdirs()
-
     for (project in projects.projects) {
-        val logoStream = Thread.currentThread().contextClassLoader
-            .getResourceAsStream("logos/${project.logo}") ?: continue
-        File(logosDir, project.logo).writeBytes(logoStream.readBytes())
+        val logoBytes = readResourceStream("logos/${project.logo}")
+            .use(InputStream::readBytes)
+        File(logosDir, project.logo).writeBytes(logoBytes)
     }
 
     println("Generated site in ${outputDir.absolutePath}")
+}
+
+private fun readResourceStream(path: String): InputStream {
+    return Thread.currentThread().contextClassLoader
+        .getResourceAsStream(path)
+        ?: error("Required resource not found: $path")
 }
