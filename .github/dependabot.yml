@@ -1,6 +1,6 @@
 version: 2
 updates:
-  - package-ecosystem: "gradle"
+  - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "weekly"
@@ -8,14 +8,14 @@ updates:
       time: "04:00"
     open-pull-requests-limit: 10
     commit-message:
-      prefix: "gradle"
-      prefix-development: "gradle"
+      prefix: "npm"
+      prefix-development: "npm"
       include: "scope"
     labels:
       - "dependencies"
-      - "gradle"
+      - "npm"
     groups:
-      gradle-dependencies:
+      npm-dependencies:
         patterns:
           - "*"
 

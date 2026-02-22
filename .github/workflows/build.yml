@@ -18,14 +18,14 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      - uses: actions/setup-java@v5
+      - uses: actions/setup-node@v4
         with:
-          distribution: liberica
-          java-version: 25
+          node-version: 24
+          cache: npm
 
-      - uses: gradle/actions/setup-gradle@v4
+      - run: npm ci
 
-      - run: ./gradlew run
+      - run: npm run build
 
       - uses: actions/upload-artifact@v6
         with:

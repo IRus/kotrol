@@ -1,64 +1,77 @@
 # Kotrol
 
-A static site generator built with Kotlin that creates a project showcase page. The application reads project data from a YAML file and generates an HTML page with logos, deployed as a containerized nginx application.
+A personal project dashboard built with Preact and esbuild. Reads project data from a JSON file and renders a card-based UI with click-frequency tracking via localStorage.
 
 ## Features
 
-- Static HTML generation using kotlinx.html
-- YAML-based project configuration
-- Logo asset management
+- Preact SPA with esbuild bundling
+- JSON-based project configuration (no rebuild needed to update projects)
+- Frequently Used section powered by localStorage
 - Docker containerization with nginx
 - Multi-platform Docker images (amd64/arm64)
 - CI/CD with GitHub Actions
 
 ## Prerequisites
 
-- Java 25
-- Gradle 8.x
+- Node.js 24
 
 ## Build and Run
 
 ### Local Development
 
 ```bash
-# Run the generator
-./gradlew run
+npm install
 
-# Output will be in build/site/
+# Dev server with watch mode on :8080
+npm run dev
+
+# Production build → build/site/
+npm run build
 ```
 
 ### Docker
 
 ```bash
-# Build the Docker image
+npm run build
 docker build -t kotrol .
-
-# Run the container
 docker run -p 8080:80 kotrol
 ```
 
-Visit `http://localhost:8080` to view the generated site.
+Visit `http://localhost:8080` to view the site.
 
 ## Project Structure
 
-- `src/main/kotlin/io/heapy/kotrol/Main.kt` - Main application entry point
-- `src/main/resources/projects.yaml` - Project configuration
-- `src/main/resources/logos/` - Project logo assets
+- `src/app.jsx` - Application entry point
+- `src/components/` - Preact components (Card, Group, FrequentSection)
+- `src/hooks/useFrequent.js` - localStorage tracking logic
+- `src/style.css` - Styles
+- `public/projects.json` - Project configuration
+- `public/logos/` - Project logo assets
 - `default.conf` - nginx configuration
 - `Dockerfile` - Container image definition
 
 ## Configuration
 
-Edit `src/main/resources/projects.yaml` to add or modify projects:
+Edit `public/projects.json` to add or modify projects:
 
-```yaml
-projects:
-  - title: "Project Name"
-    link: "https://example.com"
-    logo: "logo.svg"
+```json
+{
+  "groups": [
+    {
+      "name": "Group Name",
+      "projects": [
+        {
+          "title": "Project Name",
+          "links": [{ "label": "Online", "url": "https://example.com" }],
+          "logo": "logo.svg"
+        }
+      ]
+    }
+  ]
+}
 ```
 
-Add corresponding logo files to `src/main/resources/logos/`.
+Add corresponding logo files to `public/logos/`.
 
 ## CI/CD
 
