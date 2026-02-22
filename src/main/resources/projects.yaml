@@ -126,7 +126,7 @@ groups:
           - label: "Local"
             url: "http://192.168.1.251/"
         logo: "jetkvm.svg"
-  - name: "Smart Home Smolevichi"
+  - name: "Morty and Picklecam"
     projects:
       - title: "Home Assistant"
         links:
@@ -142,7 +142,7 @@ groups:
           - label: "Online"
             url: "https://cctv.heapyhop.com/"
         logo: "picklecam.svg"
-  - name: "Smart Home Libknehta"
+  - name: "Nimbus"
     projects:
       - title: "Home Assistant"
         links:
