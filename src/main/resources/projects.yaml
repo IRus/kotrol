@@ -74,7 +74,7 @@ groups:
         links:
           - label: "Online"
             url: "https://ibragimov.by/tt-rss/"
-        logo: "tiny-tiny-rss.svg"
+        logo: "tiny-tiny-rss.png"
       - title: "Transmission"
         links:
           - label: "Online"
@@ -86,17 +86,17 @@ groups:
         links:
           - label: "Online"
             url: "https://kotbusta.heapyhop.com/"
-        logo: "kotbusta.svg"
+        logo: "kotbusta.png"
       - title: "Pirs"
         links:
           - label: "Online"
             url: "https://pirs.heapyhop.com/"
-        logo: "pirs.svg"
+        logo: "home-assistant.svg"
       - title: "Snowflake MCP"
         links:
           - label: "Local"
             url: "http://127.0.0.1:33300/connections"
-        logo: "snowflake-mcp.svg"
+        logo: "snowflake.svg"
   - name: "Infrastructure"
     projects:
       - title: "Grafana"
