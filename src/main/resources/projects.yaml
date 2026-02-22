@@ -65,6 +65,38 @@ groups:
           - label: "Local"
             url: "http://192.168.1.250:32400/"
         logo: "plex.svg"
+      - title: "TG Spam"
+        links:
+          - label: "Online"
+            url: "https://tg_spam.heapyhop.com/"
+        logo: "tg-spam.svg"
+      - title: "Tiny Tiny RSS"
+        links:
+          - label: "Online"
+            url: "https://ibragimov.by/tt-rss/"
+        logo: "tiny-tiny-rss.svg"
+      - title: "Transmission"
+        links:
+          - label: "Online"
+            url: "http://transmission.heapyhop.com/"
+          - label: "Local"
+            url: "http://192.168.1.250:9091/transmission/web/"
+        logo: "transmission.svg"
+      - title: "Kotbusta"
+        links:
+          - label: "Online"
+            url: "https://kotbusta.heapyhop.com/"
+        logo: "kotbusta.svg"
+      - title: "Pirs"
+        links:
+          - label: "Online"
+            url: "https://pirs.heapyhop.com/"
+        logo: "pirs.svg"
+      - title: "Snowflake MCP"
+        links:
+          - label: "Local"
+            url: "http://127.0.0.1:33300/connections"
+        logo: "snowflake-mcp.svg"
   - name: "Infrastructure"
     projects:
       - title: "Grafana"
@@ -77,3 +109,47 @@ groups:
           - label: "Local"
             url: "http://192.168.1.203:5432/"
         logo: "pgadmin4.svg"
+      - title: "Unraid"
+        links:
+          - label: "Online"
+            url: "https://kashyyyk.heapyhop.com/"
+          - label: "Local"
+            url: "http://192.168.1.250/"
+        logo: "unraid.svg"
+      - title: "Gitea"
+        links:
+          - label: "Local"
+            url: "http://192.168.1.250:50000/"
+        logo: "gitea.svg"
+      - title: "JetKVM"
+        links:
+          - label: "Local"
+            url: "http://192.168.1.251/"
+        logo: "jetkvm.svg"
+  - name: "Smart Home Smolevichi"
+    projects:
+      - title: "Home Assistant"
+        links:
+          - label: "Online"
+            url: "https://morty.heapyhop.com/"
+          - label: "Local"
+            url: "http://192.168.1.250:8123/"
+          - label: "Zigbee2Mqtt"
+            url: "http://192.168.1.250:9002/"
+        logo: "home-assistant.svg"
+      - title: "Picklecam"
+        links:
+          - label: "Online"
+            url: "https://cctv.heapyhop.com/"
+        logo: "picklecam.svg"
+  - name: "Smart Home Libknehta"
+    projects:
+      - title: "Home Assistant"
+        links:
+          - label: "Online"
+            url: "https://nimbus.heapyhop.com"
+          - label: "Local"
+            url: "http://192.168.100.250:8123/"
+          - label: "Zigbee2Mqtt"
+            url: "http://192.168.100.250:9002/"
+        logo: "home-assistant.svg"
