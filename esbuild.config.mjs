@@ -1,5 +1,5 @@
 import { build, context } from "esbuild";
-import { cpSync } from "fs";
+import { cpSync, rmSync } from "fs";
 
 const dev = process.argv.includes("--dev");
 
@@ -13,6 +13,7 @@ const opts = {
   sourcemap: dev,
 };
 
+rmSync("build/site", { recursive: true, force: true });
 cpSync("public", "build/site", { recursive: true });
 
 if (dev) {
