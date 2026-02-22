@@ -20,6 +20,15 @@ h1 {
     margin-bottom: 2rem;
     color: #ffffff;
 }
+.group {
+    margin-bottom: 2.5rem;
+}
+.group h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #aaaaaa;
+    margin-bottom: 1rem;
+}
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -51,6 +60,27 @@ h1 {
     font-size: 0.9rem;
     text-align: center;
     font-weight: 500;
+}
+.links {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.link-btn {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.6rem;
+    background: #2a2a2a;
+    border: 1px solid #3a3a3a;
+    border-radius: 6px;
+    color: #cccccc;
+    text-decoration: none;
+    transition: background 0.2s, border-color 0.2s;
+}
+.link-btn:hover {
+    background: #3a3a3a;
+    border-color: #555;
+    color: #ffffff;
 }
 """.trimIndent()
 }
