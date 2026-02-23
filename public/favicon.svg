@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- Yellow paper -->
+  <path d="M24 8 L88 8 L104 24 L104 120 L24 120 Z" fill="#FFD740" stroke="#F9A825" stroke-width="3" stroke-linejoin="round"/>
+  <!-- Folded corner -->
+  <path d="M88 8 L88 24 L104 24 Z" fill="#FFF176" stroke="#F9A825" stroke-width="3" stroke-linejoin="round"/>
+  <!-- Right chevron 1 -->
+  <path d="M44 48 L64 68 L44 88" fill="none" stroke="#000000" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Right chevron 2 -->
+  <path d="M68 48 L88 68 L68 88" fill="none" stroke="#000000" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
