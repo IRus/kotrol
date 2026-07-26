@@ -1,13 +1,11 @@
 import { Card } from "./Card.jsx";
 
-export function Group({ group }) {
-  const visibleProjects = group.projects.filter((project) => project.display !== false);
-
+export function Group({ title, projects }) {
   return (
-    <section class="group">
-      <h2>{group.name}</h2>
+    <section class="section">
+      {title && <h3 class="section-title">{title}</h3>}
       <div class="grid">
-        {visibleProjects.map((project) => (
+        {projects.map((project) => (
           <Card key={project.title} project={project} />
         ))}
       </div>

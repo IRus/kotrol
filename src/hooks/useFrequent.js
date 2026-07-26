@@ -1,3 +1,5 @@
+import { useState, useEffect } from "preact/hooks";
+
 const KEY = "kotrol-freq";
 const MAX = 8;
 
@@ -36,4 +38,16 @@ export function getFrequent() {
     .filter((d) => d.links)
     .sort((a, b) => b.count - a.count)
     .slice(0, MAX);
+}
+
+export function useFrequent() {
+  const [entries, setEntries] = useState(getFrequent);
+
+  useEffect(() => {
+    const update = () => setEntries(getFrequent());
+    window.addEventListener("kotrol-freq-changed", update);
+    return () => window.removeEventListener("kotrol-freq-changed", update);
+  }, []);
+
+  return entries;
 }
