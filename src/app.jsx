@@ -1,6 +1,7 @@
 import { render } from "preact";
 import { useState, useEffect, useRef, useMemo } from "preact/hooks";
 import { useFrequent } from "./hooks/useFrequent.js";
+import { usePreloadedLogos } from "./hooks/usePreloadedLogos.js";
 import { Sidebar } from "./components/Sidebar.jsx";
 import { Group } from "./components/Group.jsx";
 import { SearchIcon, SidebarIcon } from "./components/icons.jsx";
@@ -26,6 +27,7 @@ function App() {
   const [query, setQuery] = useState("");
   const [collapsed, setCollapsed] = useState(() => localStorage.getItem(SIDEBAR_KEY) === "1");
   const frequent = useFrequent();
+  const logoUrls = usePreloadedLogos(groups);
   const search = useRef(null);
 
   useEffect(() => {
@@ -173,7 +175,12 @@ function App() {
 
           {sections.length > 0 ? (
             sections.map((section) => (
-              <Group key={section.title || heading} title={section.title} projects={section.projects} />
+              <Group
+                key={section.title || heading}
+                title={section.title}
+                projects={section.projects}
+                logoUrls={logoUrls}
+              />
             ))
           ) : (
             <p class="empty">No projects match “{query.trim()}”.</p>

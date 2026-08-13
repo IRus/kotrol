@@ -8,12 +8,12 @@ function hostname(url) {
   }
 }
 
-export function Card({ project }) {
+export function Card({ project, logoUrl }) {
   const onClick = () => trackClick(project);
 
   const art = (
     <span class="art">
-      <img src={`logos/${project.logo}`} alt="" />
+      <img src={logoUrl || `logos/${project.logo}`} alt="" />
     </span>
   );
 
