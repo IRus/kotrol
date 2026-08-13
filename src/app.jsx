@@ -11,8 +11,7 @@ const SIDEBAR_KEY = "kotrol-sidebar";
 
 const IS_MAC = /Mac|iPhone|iPad|iPod/.test(navigator.userAgent);
 const SEARCH_SHORTCUT = IS_MAC ? "⌘K" : "Ctrl K";
-/* IntelliJ's binding for the project tool window */
-const SIDEBAR_SHORTCUT = IS_MAC ? "⌘1" : "Alt 1";
+const SIDEBAR_SHORTCUT = IS_MAC ? "⌘." : "Alt 1";
 
 function matches(project, query) {
   const haystack = [project.title, ...project.links.map((link) => link.label + " " + link.url)]
@@ -39,7 +38,10 @@ function App() {
     const onKeyDown = (event) => {
       const focused = document.activeElement === search.current;
       /* event.code, not event.key: Alt+1 does not produce "1" on every layout */
-      if (event.code === "Digit1" && (IS_MAC ? event.metaKey : event.altKey)) {
+      if (
+        (IS_MAC && event.code === "Period" && event.metaKey) ||
+        (!IS_MAC && event.code === "Digit1" && event.altKey)
+      ) {
         event.preventDefault();
         setCollapsed((value) => {
           localStorage.setItem(SIDEBAR_KEY, value ? "0" : "1");
